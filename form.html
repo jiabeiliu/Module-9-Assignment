@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Pizza Service</title>
+    <!-- 链接CSS文件 -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pizza Registration Form</h1>
+        <form id="pizzaForm">
+            <div class="form-field">
+                <label for="name">Name (at least 3 characters):</label>
+                <input type="text" id="name" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-field">
+                <label for="yearOfBirth">Year of Birth (1900-2100):</label>
+                <input type="number" id="yearOfBirth" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-field">
+                <label><input type="checkbox" id="usResident"> Do you live in the United States?</label>
+            </div>
+            <div class="form-field">
+                <label for="zipcode">Zipcode (5 digits if US resident):</label>
+                <input type="text" id="zipcode">
+                <span class="error-message"></span>
+            </div>
+            <div class="form-field">
+                <label for="password">Password (at least 8 characters):</label>
+                <input type="password" id="password" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-field">
+                <label>Preferred Type of Pizza:</label>
+                <select id="pizzaPreference" required>
+                    <option value="">Please select...</option>
+                    <option value="With pineapple">With pineapple</option>
+                    <option value="Without pineapple">Without pineapple</option>
+                    <option value="I do not like pizza">I do not like pizza</option>
+                </select>
+                <span class="error-message"></span>
+            </div>
+            <button type="submit">Submit</button>
+            <div id="formResult"></div>
+        </form>
+    </div>
+    <!-- 链接JavaScript文件 -->
+    <script src="form.js"></script>
+</body>
+</html>
